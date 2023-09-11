@@ -3,6 +3,8 @@
 Acesse o projeto
 [http://localhost:8989](http://localhost:8989)
 
+## Commit via terminal
+
 ```
 # Adicione as mudanças ao índice
 git add .
