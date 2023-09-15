@@ -11,11 +11,21 @@ composer install
 ```
 
 ```
+#Entrar no container docker
+
+docker-compose exec app bash
+
 # Criar Controller
 php artisan make:controller NomedoController
+
+# Criar Model
+php artisan make:model NomedoModel
+
+# Criar tabelas
+php artisan migrate  
 ```
 
-## Commit via terminal
+## Commit
 
 ```
 # Adicione as mudanças ao índice
