@@ -146,6 +146,9 @@ git add .
 # Crie um novo commit com uma mensagem
 git commit -m "Adicionei novos recursos"
 
-# Atualize o repositório remoto (substitua 'main' pelo nome da sua branch)
+# Atualize o repositório remoto
 git push origin main
+
+# Atualize o repositório Local 
+git pull
 ```
