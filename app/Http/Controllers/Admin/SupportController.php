@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Support;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class SupportController extends Controller
 {
@@ -18,7 +19,15 @@ class SupportController extends Controller
     {
         return view('admin/supports/create');
     }
-    public function store(Request $request){
-        dd($request->all());
+    public function store(Request $request, Support $support)
+    {
+
+        $data = $request->all();
+
+        $data['status'] = 'a';
+
+        $support = $support::create($data);
+
+        return Redirect()->route('supports.index');
     }
 }
