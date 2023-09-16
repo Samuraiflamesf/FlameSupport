@@ -2,14 +2,16 @@
 
 <a href="{{route('supports.create')}}">Criar Duvida</a>
 
+@foreach($supports as $support)
+@endforeach
 <table>
     <thead>
         <th>Assunto</th>
         <th>Status</th>
         <th>Descricao</th>
-        <th></th>
+        <thead></th>
     </thead>
-<tbody>
+    <tbody>
     @foreach ($supports as $support)
     <tr>
         <td>{{$support->subject}}</td>

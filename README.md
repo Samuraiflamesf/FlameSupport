@@ -12,15 +12,11 @@ composer install
 
 ```
 #Entrar no container docker
-
 docker-compose exec app bash
-
 # Criar Controller
 php artisan make:controller NomedoController
-
 # Criar Model
 php artisan make:model NomedoModel
-
 # Criar tabelas
 php artisan migrate  
 ```
@@ -30,10 +26,8 @@ php artisan migrate
 ```
 # Adicione as mudanças ao índice
 git add .
-
 # Crie um novo commit com uma mensagem
 git commit -m "Adicionei novos recursos"
-
 # Atualize o repositório remoto (substitua 'main' pelo nome da sua branch)
 git push origin main
 ```
