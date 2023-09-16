@@ -10,7 +10,7 @@
 
 </div>
 
-# 📄 Tipo do Projeto/Nome do Projeto
+# 📄 Sistema Tickets/FlameSupport
 
 ![status-em-andamento](https://user-images.githubusercontent.com/62897976/185768581-1d051a52-2e60-4378-b31d-39028cbfb5c8.svg)
 
@@ -95,39 +95,15 @@ php artisan key:generate
 - [ ] Autenticação de APIs no Laravel com Sanctum
 - [ ] Finalizando o Projeto Laravel 10.x
 
-## Considerações Finais
-
-Deserunt occaecat non aliqua sit et anim ex amet elit pariatur. Cupidatat culpa exercitation magna cupidatat qui incididunt commodo do ex elit et anim. Qui quis tempor cupidatat commodo. Excepteur tempor nulla ea mollit proident proident fugiat sit reprehenderit consequat. Eu laboris aliqua culpa deserunt cupidatat amet.
-
-## Anexos
-
-<a href="#">
-  <img src=""  width="160px;">
-</a>
-
-## 🤝 Colaboradores
-
-Agradecemos às seguintes pessoas que contribuíram para este projeto:
-
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://github.com/Samuraiflamesf">
-          <img src="https://avatars.githubusercontent.com/u/62897976?s=400&u=afa8e717adda64a162c125cbbbcdfa187b86348a&v=4" width="160px;" alt="Foto do GitHub">
-          <br>
-          <sub>
-            <b>Bernardo Nogueira - Samuraiflamesf</b>
-          </sub>
-      </a>
-    </td>
-  </tr>
-</table>
-
-## 📕 Referencias e Links Complementares
+## 📕 Referencias, Links Complementares e Colaboradores 🤝
 
 **Curso do Youtube**
 
 - [Youtube](https://www.youtube.com/watch?v=AN-LZuw2GIc&list=PLVSNL1PHDWvQ1N6fqhQ5HQzFtN-xrkjNU)
+
+**Github Professor**
+
+- [Carlos Ferreira](https://github.com/carlosfgti)
 
 **Github do Projeto do Curso**
 
