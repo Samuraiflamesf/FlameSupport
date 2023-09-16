@@ -13,18 +13,18 @@
                 </svg></a>
 
         </span>
-        <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-200">
+        <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-info-content">
             <div class="card-body">
-                <header class="font-medium title-font text-gray-900 mb-1 text-xl p-auto mx-5 mx-auto max-w-screen-xl p-4">
+                <header class="font-medium title-font text-base-100 mb-1 text-xl p-auto mx-5 mx-auto max-w-screen-xl p-4">
                     Nova Duvida
                 </header>
 
 
-                <form action="{{ route('supports.store') }}" method="post" class="form-control">
+                <form action="{{ route('supports.store') }}" method="post">
                     @csrf
-                    <input name="subject" type="text" placeholder="Assunto" class="input input-bordered input-secondary input-bordered w-full">
-                    <textarea name="body" cols="30" rows="5" class="textarea textarea-secondary  textarea-bordered textarea-md w-full mt-2" placeholder="Descricao"></textarea>
-                    <button type="submit" class="btn btn-info btn-block mt-2">
+                    <input name="subject" type="text" placeholder="Assunto" class="input input-bordered input-secondary input-bordered w-full" required>
+                    <textarea name="body" cols="30" rows="5" class="textarea textarea-secondary  textarea-bordered textarea-md w-full mt-2" placeholder="Descricao" required></textarea>
+                    <button type="submit" class="btn btn-primary btn-block mt-2">
                         Enviar
                     </button>
                 </form>
