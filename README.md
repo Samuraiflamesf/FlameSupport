@@ -72,7 +72,7 @@ php artisan key:generate
 - [x] Listagem de Dados com Blade
 - [x] Inserir Registro (e mass assignment)
 - [x] Exibir Detalhes do Registro com Laravel
-- [ ] UI/UX da Aplicação Laravel com TailwindCSS
+- [x] UI/UX da Aplicação Laravel com TailwindCSS
 - [ ] Atualizar Registro com o Laravel 10
 - [ ] Deletar Registro com Laravel 10
 - [ ] Validações (do jeito certo) com Laravel 10
@@ -111,9 +111,13 @@ php artisan key:generate
 
 **Github do Projeto do Curso**
 
-- [especializati/curso-de-laravel-10](https://github.com/especializati/curso-de-laravel-10)
+- [Especializati/Curso-de-laravel-10](https://github.com/especializati/curso-de-laravel-10)
 
-## Dicas Laravel
+**DaisyUI/Lib Tailwind**
+
+- [DaisyUI](https://daisyui.com/)
+
+## Colinha de Dicas
 
 ```
 # Para subir container
