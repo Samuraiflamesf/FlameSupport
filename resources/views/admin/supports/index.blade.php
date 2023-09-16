@@ -1,27 +1,41 @@
-<H1>Listagem dos Suportes</H1>
+@extends('admin.layouts.app')
+@section('title', 'Forum')
+@section('content')
 
-<a href="{{route('supports.create')}}">Criar Duvida</a>
+@section('header')
+    Listagem dos Suportes
+@endsection
 
-@foreach($supports as $support)
-@endforeach
-<table>
-    <thead>
-        <th>Assunto</th>
-        <th>Status</th>
-        <th>Descricao</th>
-        <thead></th>
-    </thead>
-    <tbody>
+<div class="overflow-x-auto">
     @foreach ($supports as $support)
-    <tr>
-        <td>{{$support->subject}}</td>
-        <td>{{$support->status}}</td>
-        <td>{{$support->body}}</td>
-        <td>
-            >
-        </td>
-    </tr>
-        
     @endforeach
-</tbody>
-</table>
+
+    <table class="table">
+        <thead>
+            <th>Assunto</th>
+            <th>Status</th>
+            <th>Descricao</th>
+            <th>Acao</th>
+        </thead>
+        <tbody>
+            @foreach ($supports as $support)
+                <tr class="hover">
+                    <td>{{ $support->subject }}</td>
+                    <td>{{ $support->status }}</td>
+                    <td>{{ $support->body }}</td>
+                    <td>
+                        >
+                    </td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
+</div>
+<a href="{{ route('supports.create') }}" class="btn btn-warning my-4">Criar Duvida</a>
+<div class="flex justify-between">
+    <div></div>
+    <div>
+    </div>
+</div>
+
+@endsection
