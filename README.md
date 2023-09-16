@@ -72,6 +72,7 @@ php artisan key:generate
 - [x] Listagem de Dados com Blade
 - [x] Inserir Registro (e mass assignment)
 - [x] Exibir Detalhes do Registro com Laravel
+- [ ] UI/UX da Aplicação Laravel com TailwindCSS
 - [ ] Atualizar Registro com o Laravel 10
 - [ ] Deletar Registro com Laravel 10
 - [ ] Validações (do jeito certo) com Laravel 10
@@ -93,7 +94,6 @@ php artisan key:generate
 - [ ] API Rest no Laravel Atualizar Registro
 - [ ] Api Rest no Laravel 10 Listar Registros com Paginação
 - [ ] Trabalhar com Padrão Adapter no Laravel 10
-- [ ] UI/UX da Aplicação Laravel com TailwindCSS
 - [ ] Usar Componentes do Jeito Certo no Laravel
 - [ ] Autenticação no Laravel 10 SIMPLES
 - [ ] Autenticação de APIs no Laravel com Sanctum
