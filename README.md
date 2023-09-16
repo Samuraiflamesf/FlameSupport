@@ -18,14 +18,15 @@
 
 FlameSupport é um sistema online baseado em Laravel 10 que oferece suporte eficiente por meio de tickets, simplificando a comunicação entre clientes e equipes de suporte em um ambiente intuitivo e organizado.
 
-### Passo a passo para rodar o projeto
+## Passo a passo para rodar o projeto
 
+Clone o projeto
 ```
-# Passo a passo para rodar o projeto
 git clone https://github.com/Samuraiflamesf/study_laravel.git
 cd laravel-10/
-
-# Crie o Arquivo .env
+```
+Crie o Arquivo .env
+```
 cp .env.example .env
 ```
 Atualize essas variáveis de ambiente no arquivo .env
@@ -52,6 +53,9 @@ Suba os containers do projeto
 ```
 docker-compose up -d
 docker-compose exec app bash
+```
+Instale as dependências do projeto e gere a key do projeto Laravel
+```
 composer install
 php artisan key:generate
 
@@ -95,7 +99,7 @@ php artisan key:generate
 - [ ] Autenticação de APIs no Laravel com Sanctum
 - [ ] Finalizando o Projeto Laravel 10.x
 
-## 📕 Referencias, Links Complementares e Colaboradores 🤝
+## 🤝 Colaboradores e Links Complementares
 
 **Curso do Youtube**
 
