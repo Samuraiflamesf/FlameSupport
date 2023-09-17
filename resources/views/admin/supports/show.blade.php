@@ -7,7 +7,8 @@
             <span class="indicator-item indicator-start  badge badge-warning">
                 Status: {{ $support->status }}
             </span>
-            <div class="card w-96  bg-primary text-primary-content grid bg-base-200 place-items-center shadow-2xl">
+
+            <div class="card w-96  bg-neutral text-primary-content grid bg-base-200 place-items-center shadow-2xl">
                 <div class="card-body">
                     <h2 class="card-title m-auto">
                         Detalhes da duvida #{{ $support->id }}
@@ -16,24 +17,32 @@
                     <h3 class="text-xl m-auto">
                         {{ $support->subject }}
                     </h3>
-                    <p class="bg-neutral m-2 p-2 rounded ">
+                    <p class="bg-neutral-focus m-2 p-2 rounded ">
                         {{ $support->body }}
                     </p>
-                    <div class="indicator-item indicator-bottom ">
-                        <a href="{{ route('supports.index') }}" class="btn btn-neutral">
-                            Voltar
-                        </a>
-                    </div>
-                    <div class=" m-auto">
+                    <div class="indicator-item  indicator-bottom indicator-center badge">
                         <form action="{{ route('supports.destroy', $support->id) }}" method="POST" class="m-2">
                             @csrf()
                             @method('DELETE')
                             <button type="submit">
-                                <button class="btn btn-square btn-neutral hover:btn-error" >
-                                    <i class="fa-regular fa-trash-can fa-xl"></i>
+                                <button class="btn btn-error">
+                                    Deletar
+
                                 </button>
                             </button>
                         </form>
+
+                    </div>
+                    <div class="indicator-item">
+                        <a href="{{ route('supports.index') }}">
+                            <button class="btn btn-square btn-primary hover:btn-error mx-5">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6"fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </a>
                     </div>
                 </div>
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt" data-theme="pastel">
+<html lang="pt" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -15,19 +15,19 @@
 
 <body class="flex flex-col h-screen">
     <header>
-        <div class=" navbar bg-neutral text-neutral-content">
-            <a href="{{route('index')}}" class="btn btn-neutral normal-case text-xl">
+        <div class=" navbar bg-neutral text-neutral-content ">
+            <a href="{{route('index')}}" class="btn btn-neutral normal-case text-xl text-primary-content">
                 {{ config('app.name') }}
             </a>
         </div>
         @if (!empty(View::yieldContent('header')))
-            <div class="font-medium title-font text-gray-900 text-xl p-auto mx-auto max-w-screen-xl m-5 mb-1 p-4">
+            <div class="font-medium title-font  text-xl p-auto mx-auto max-w-screen-xl m-5 mb-1 p-4 text-primary-content">
                 @yield('header')
             </div>
         @endif
     </header>
 
-    <div class="container mx-auto max-w-screen-xl p-4 flex-grow">
+    <div class="container mx-auto max-w-screen-xl p-4 flex-grow ">
         @yield('container')
     </div>
 
