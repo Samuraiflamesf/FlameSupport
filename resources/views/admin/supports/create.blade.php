@@ -1,18 +1,21 @@
 @extends('admin.layouts.app')
 @section('title', 'Nova Duvida')
 
+@section('container')
 
-@section('content')
+    <div class="flex justify-center h-full ">
 
-    <div class="hero-content mt-0 pt-0">
-
-        <div class="indicator">
+        <div class="indicator m-auto">
             <span class="indicator-item ">
-                <a href="{{ route('supports.index') }}" class="btn btn-square btn-info mx-5"><svg
-                        xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                    </svg></a>
+                <button class="btn btn-square btn-info hover:btn-error mx-5">
+
+                    <a href="{{ route('supports.index') }}" ><svg
+                            xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg></a>
+                </button>
 
             </span>
             <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-neutral">
@@ -29,10 +32,12 @@
                             class="input input-bordered input-secondary input-bordered w-full" required>
                         <textarea name="body" cols="30" rows="5"
                             class="textarea textarea-secondary  textarea-bordered textarea-md w-full mt-2" placeholder="Descricao" required></textarea>
-                        <button type="submit" class="btn bg-blue-500  text-white hover:text-black btn-block mt-2">
-                            <i class="fa-regular fa-paper-plane"></i>
-                            Enviar
-                            <i class="fa-regular fa-paper-plane"></i>
+                        <button type="submit" class="mt-2">
+                            <button class="btn btn-info hover:btn-success btn-block ">
+                                <i class="fa-regular fa-paper-plane"></i>
+                                Enviar
+                                <i class="fa-regular fa-paper-plane"></i>
+                            </button>
                         </button>
                     </form>
 

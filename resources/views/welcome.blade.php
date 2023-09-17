@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 @section('title', 'Forum')
-@section('content')
+@section('container')
 
     <div class="hero flex justify-center h-full">
         <div class="hero-content text-center">
