@@ -24,8 +24,19 @@
                             Voltar
                         </a>
                     </div>
-
+                    <div class=" m-auto">
+                        <form action="{{ route('supports.destroy', $support->id) }}" method="POST" class="m-2">
+                            @csrf()
+                            @method('DELETE')
+                            <button type="submit">
+                                <button class="btn btn-square btn-neutral hover:btn-error" >
+                                    <i class="fa-regular fa-trash-can fa-xl"></i>
+                                </button>
+                            </button>
+                        </form>
+                    </div>
                 </div>
+
             </div>
         </div>
     </div>

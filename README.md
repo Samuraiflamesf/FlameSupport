@@ -73,7 +73,7 @@ php artisan key:generate
 - [x] Inserir Registro (e mass assignment)
 - [x] Exibir Detalhes do Registro com Laravel
 - [x] UI/UX da Aplicação Laravel com TailwindCSS
-- [ ] Atualizar Registro com o Laravel 10
+- [x] Atualizar Registro com o Laravel 10
 - [ ] Deletar Registro com Laravel 10
 - [ ] Validações (do jeito certo) com Laravel 10
 - [ ] Validar Valor Único no Update com Laravel 10
@@ -97,7 +97,7 @@ php artisan key:generate
 - [ ] Usar Componentes do Jeito Certo no Laravel
 - [ ] Autenticação no Laravel 10 SIMPLES
 - [ ] Autenticação de APIs no Laravel com Sanctum
-- [ ] Finalizando o Projeto Laravel 10.x
+- [ ] Finalizando o Projeto 
 
 ## 🤝 Colaboradores e Links Complementares
 
