@@ -31,7 +31,9 @@
         </tbody>
     </table>
 </div>
-<a href="{{ route('supports.create') }}" class="btn btn-warning my-4">Criar Duvida</a>
+<a href="{{ route('supports.create') }}" class="btn btn-warning my-4">
+   <i class="fa-solid fa-triangle-exclamation"></i> Criar Duvida <i class="fa-solid fa-triangle-exclamation"></i>
+</a>
 <div class="flex justify-between">
     <div></div>
     <div>
