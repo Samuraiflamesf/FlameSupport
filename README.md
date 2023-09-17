@@ -78,7 +78,7 @@ php artisan key:generate
 - [x] Validações (do jeito certo) com Laravel 10
 - [x] Validar Valor Único no Update com Laravel 10
 - [x] Service Layer no Laravel 10
-- [ ] Trabalhar com DTOs no Laravel 10
+- [x] Trabalhar com DTOs no Laravel 10
 - [ ] Trabalhar com Repository Pattern e Inversão de Dependência
 - [ ] Implementar Repositório no Laravel 10
 - [ ] Finalizando o Repositório no Laravel 10
