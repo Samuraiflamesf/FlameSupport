@@ -43,7 +43,7 @@ class SupportController extends Controller
     public function store(StoreRequest $request, Support $support)
     {
         // Obtém os dados do formulário
-        $data = $request->all();
+        $data = $request->validated();
 
         // Define o status como 'a'
         $data['status'] = 'a';
@@ -68,7 +68,7 @@ class SupportController extends Controller
     }
 
     // Função para atualizar dúvidas existentes
-    public function update(Request $request, Support $support, string $id)
+    public function update(StoreRequest $request, Support $support, string $id)
     {
         // Verifica se a dúvida com o ID fornecido existe
         if (!$support = $support->find($id)) {
@@ -77,10 +77,7 @@ class SupportController extends Controller
         }
 
         // Atualiza a dúvida com os campos 'subject' e 'body' do formulário
-        $support->update($request->only(
-            'subject',
-            'body'
-        ));
+        $support->update($request->validated());
 
         // Redireciona para a página de lista de dúvidas
         return redirect()->route('supports.index');

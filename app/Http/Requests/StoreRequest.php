@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class StoreRequest extends FormRequest
 {
@@ -18,7 +19,7 @@ class StoreRequest extends FormRequest
      */
     public function rules(): array
     {
-        return [
+        $rules = [
             'subject' => 'required|min:3|max:255|unique:supports',
             'body' => [
                 'required',
@@ -26,5 +27,22 @@ class StoreRequest extends FormRequest
                 'max:10000'
             ]
         ];
+        if ($this->method() ==='PUT') {
+            $rules = [
+                'subject' => [
+                    'required',
+                    'min:3',
+                    'max:255',
+                    Rule::unique('supports')->ignore($this->id),
+                ],
+                'body' => [
+                    'required',
+                    'min:3',
+                    'max:10000'
+                ]
+            ];
+        }
+
+        return $rules;
     }
 }
