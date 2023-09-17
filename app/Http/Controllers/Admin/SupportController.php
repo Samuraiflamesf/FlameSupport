@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreRequest;
 use App\Models\Support;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
@@ -39,7 +40,7 @@ class SupportController extends Controller
     }
 
     // Função para cadastrar novas dúvidas
-    public function store(Request $request, Support $support)
+    public function store(StoreRequest $request, Support $support)
     {
         // Obtém os dados do formulário
         $data = $request->all();
@@ -92,7 +93,7 @@ class SupportController extends Controller
             // Se não existir, retorna para a página anterior
             return back();
         }
-        
+
         $support->delete();
 
         // Redireciona para a página de lista de dúvidas
