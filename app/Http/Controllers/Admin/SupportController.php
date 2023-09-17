@@ -9,12 +9,15 @@ use Illuminate\Support\Facades\Redirect;
 
 class SupportController extends Controller
 {
+    //Funcao que  alimentar a tabela do index 
     public function index(Support $support)
     {
         $supports = $support->all();
 
         return view('admin/supports/index', compact('supports'));
     }
+
+    //Funcao que visualiza detalhes da duvida
     public function show(string|int $id)
     {
 
@@ -24,10 +27,13 @@ class SupportController extends Controller
         return view('admin/supports/show', compact('support'));
     }
 
+    //Funcao de criar novas duvidas
     public function create()
     {
         return view('admin/supports/create');
     }
+
+    //Funcao para cadastar duvidas
     public function store(Request $request, Support $support)
     {
 
@@ -38,5 +44,29 @@ class SupportController extends Controller
         $support = $support::create($data);
 
         return Redirect()->route('supports.index');
+    }
+
+    //Funcao para editar as duvidas
+    public function edit(Support $support, string|int $id)
+    {
+        if (!$support = $support->where('id', $id)->first()) {
+            return back();
+        }
+        return view('admin/supports.edit', compact('support'));
+    }
+
+    //Funcao para atualizar as duvidas
+    public function update(Request $request, Support $support, string $id)
+    {
+        if (!$support = $support->find($id)) {
+            return back();
+        }
+
+        $support->update($request->only(
+            'subject',
+            'body'
+        ));
+
+        return redirect()->route('supports.index');
     }
 }

@@ -25,6 +25,7 @@
                     <td>{{ $support->body }}</td>
                     <td>
                         <a href="{{route('supports.show',[$support->id])}}"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <a href="{{route('supports.edit',[$support->id])}}"><i class="fa-regular fa-pen-to-square"></i></a>
                     </td>
                 </tr>
             @endforeach
