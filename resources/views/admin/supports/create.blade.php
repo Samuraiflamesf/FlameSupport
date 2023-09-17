@@ -46,7 +46,7 @@
             <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-neutral text-primary-content">
                 <div class="card-body">
                     <h2 class="card-title m-auto">
-                        Nova Duvida
+                        Nova Dúvida
                         
                     </h2>
                     <div class="divider"></div>
