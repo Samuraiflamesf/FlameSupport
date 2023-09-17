@@ -2,29 +2,37 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\DTO\CreateSupportDTO;
+use App\DTO\UpdateSupportDTO;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreRequest;
 use App\Models\Support;
+use App\Services\SupportService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 
 class SupportController extends Controller
 {
+    public function __construct(
+        protected SupportService $service
+    ) {
+    }
+
     // Função que exibe a lista de dúvidas
-    public function index(Support $support)
+    public function index(Request $request)
     {
         // Obtém todas as dúvidas da tabela de suporte
-        $supports = $support->all();
+        $supports = $this->service->getAll($request->filter);
 
         // Retorna a view 'admin/supports/index' com as dúvidas obtidas
         return view('admin/supports/index', compact('supports'));
     }
 
     // Função que exibe detalhes de uma dúvida específica
-    public function show(string|int $id)
+    public function show(string $id)
     {
         // Verifica se a dúvida com o ID fornecido existe
-        if (!$support = Support::find($id)) {
+        if (!$support = $this->service->findOne($id)) {
             // Se não existir, retorna para a página anterior
             return back();
         }
@@ -42,24 +50,19 @@ class SupportController extends Controller
     // Função para cadastrar novas dúvidas
     public function store(StoreRequest $request, Support $support)
     {
-        // Obtém os dados do formulário
-        $data = $request->validated();
-
-        // Define o status como 'a'
-        $data['status'] = 'a';
-
-        // Cria uma nova dúvida com os dados fornecidos
-        $support = $support::create($data);
+        $this->service->new(
+            CreateSupportDTO::makFromRequest($request)
+        );
 
         // Redireciona para a página de lista de dúvidas
         return Redirect()->route('supports.index');
     }
 
     // Função para editar dúvidas existentes
-    public function edit(Support $support, string|int $id)
+    public function edit(string $id)
     {
         // Verifica se a dúvida com o ID fornecido existe
-        if (!$support = $support->where('id', $id)->first()) {
+        if (!$support = $this->service->findOne($id)) {
             // Se não existir, retorna para a página anterior
             return back();
         }
@@ -70,28 +73,23 @@ class SupportController extends Controller
     // Função para atualizar dúvidas existentes
     public function update(StoreRequest $request, Support $support, string $id)
     {
+        $support = $this->service->update(
+            UpdateSupportDTO::makFromRequest($request)
+        );
+
         // Verifica se a dúvida com o ID fornecido existe
-        if (!$support = $support->find($id)) {
+        if (!$support) {
             // Se não existir, retorna para a página anterior
             return back();
         }
-
-        // Atualiza a dúvida com os campos 'subject' e 'body' do formulário
-        $support->update($request->validated());
 
         // Redireciona para a página de lista de dúvidas
         return redirect()->route('supports.index');
     }
 
-    public function destroy(string|int $id)
+    public function destroy(string $id)
     {
-        // Verifica se a dúvida com o ID fornecido existe
-        if (!$support = Support::find($id)) {
-            // Se não existir, retorna para a página anterior
-            return back();
-        }
-
-        $support->delete();
+        $this->service->delete($id);
 
         // Redireciona para a página de lista de dúvidas
         return redirect()->route('supports.index');

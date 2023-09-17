@@ -74,11 +74,10 @@ php artisan key:generate
 - [x] Exibir Detalhes do Registro com Laravel
 - [x] UI/UX da Aplicação Laravel com TailwindCSS
 - [x] Atualizar Registro com o Laravel 10
-- [ ] Deletar Registro com Laravel 10
-- [ ] Validações (do jeito certo) com Laravel 10
-- [ ] Validar Valor Único no Update com Laravel 10
-- [ ] Teoria Service Layer + Repository Pattern + DTO
-- [ ] Service Layer no Laravel 10
+- [x] Deletar Registro com Laravel 10
+- [x] Validações (do jeito certo) com Laravel 10
+- [x] Validar Valor Único no Update com Laravel 10
+- [x] Service Layer no Laravel 10
 - [ ] Trabalhar com DTOs no Laravel 10
 - [ ] Trabalhar com Repository Pattern e Inversão de Dependência
 - [ ] Implementar Repositório no Laravel 10
